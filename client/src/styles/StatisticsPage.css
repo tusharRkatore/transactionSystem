@@ -1,0 +1,35 @@
+.statistics-container {
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.statistics-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.month-dropdown {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.statistics {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.statistics p {
+  margin: 10px 0;
+  font-weight: bold;
+}
