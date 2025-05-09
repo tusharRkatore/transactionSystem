@@ -11,7 +11,7 @@ const categoryRoute = require("./routes/category-distribution");
 const transactionRoute = require("./routes/combine-data-route");
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://transaction-system-client.vercel.app",
   methods: "POST,GET,PUT,DELETE,PATCH,HEAD",
   credentials: true,
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
