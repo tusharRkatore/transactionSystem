@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://mcr.microsoft.com/
-        username: ${{ secrets.AzureAppService_ContainerUsername_a2e0868b731e453e808f41b43d6d1520 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_a5a15b7d0f9348b9a5015e4c80e55818 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_85fe9bbe0dff46d79b15cfca89bb2b80 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_ff16c94787164c93871d39724ccd552d }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_a2e0868b731e453e808f41b43d6d1520 }}/azure-app-service/windows/parkingpage:${{ github.sha }}
+        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_85fe9bbe0dff46d79b15cfca89bb2b80 }}/azure-app-service/windows/parkingpage:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'MernStack'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6c64556ce72e461ebd90655244d437d8 }}
-        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_a2e0868b731e453e808f41b43d6d1520 }}/azure-app-service/windows/parkingpage:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_452980159aad4109bfd5198c1b3bcfea }}
+        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_85fe9bbe0dff46d79b15cfca89bb2b80 }}/azure-app-service/windows/parkingpage:${{ github.sha }}'
