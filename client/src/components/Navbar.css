@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%;
+  padding: 15px 25px;
+  background: #047bfa;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.logout-btn {
+  background: #ff4747 !important;
+}
+
+.logout-btn:hover {
+  background: #d63b3b !important;
+}
