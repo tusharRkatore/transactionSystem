@@ -1,0 +1,132 @@
+/* ------------------------------------------ */
+/* 🌈 GLOBAL AUTH PAGE BACKGROUND */
+/* ------------------------------------------ */
+.auth-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ------------------------------------------ */
+/* 💎 GLASS CARD (Login/Register Box) */
+/* ------------------------------------------ */
+.auth-card {
+  width: 380px;
+  padding: 35px 40px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+  color: #fff;
+}
+
+/* ------------------------------------------ */
+/* 📝 TITLE */
+/* ------------------------------------------ */
+.auth-card h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------------------ */
+/* 🧾 INPUT FIELDS */
+/* ------------------------------------------ */
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin: 18px 0;
+  font-size: 15px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.auth-input:focus {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* ------------------------------------------ */
+/* 🔘 BUTTON */
+/* ------------------------------------------ */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #ff6a6a, #ff3d7f);
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff3d7f, #ff6a6a);
+  box-shadow: 0px 8px 18px rgba(255, 0, 100, 0.4);
+}
+
+/* ------------------------------------------ */
+/* ⚠ ERROR / SUCCESS MESSAGE */
+/* ------------------------------------------ */
+.auth-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffe6e6;
+}
+
+/* ------------------------------------------ */
+/* 🔗 LINK TEXT */
+/* ------------------------------------------ */
+.auth-link {
+  margin-top: 15px;
+  font-size: 15px;
+
+  color: #fff;
+  cursor: pointer;
+
+  display: inline-block;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #ffddff;
+  transform: scale(1.05);
+}
