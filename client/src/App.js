@@ -24,17 +24,20 @@ function App() {
   return (
     <Router>
       <Navbar />
+    
       <Routes>
         {/* Dashboard Page */}
         <Route
           path="/"
           element={
+            <ProtectedRoute>
             <div className="App">
               <TransactionsPage />
               <StatisticsPage />
               <PriceDistributionChart />
               <CategoryDistributionChart />
             </div>
+            </ProtectedRoute>
           }
         />
 
