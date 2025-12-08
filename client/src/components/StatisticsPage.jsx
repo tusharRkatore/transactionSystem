@@ -20,7 +20,7 @@ const StatisticsPage = () => {
 
     const fetchStatistics = async (month) => {
         try {
-            const response = await fetch(`http://localhost:5008/statistics/${month}`);
+            const response = await fetch(`https://transactionsystem-server.onrender.com/statistics/${month}`);
             const data = await response.json();
             setStatistics(data);
         } catch (error) {
