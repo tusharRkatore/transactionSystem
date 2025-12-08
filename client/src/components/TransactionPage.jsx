@@ -15,7 +15,7 @@ const TransactionsPage = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await fetch("http://localhost:5008/all-transactions");
+        const response = await fetch("https://transactionsystem-server.onrender.com/all-transactions");
         const data = await response.json();
 
         console.log("BACKEND RESPONSE:", data);
