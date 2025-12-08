@@ -24,7 +24,7 @@ const PriceDistributionChart = () => {
     const fetchPriceData = async () => {
       if (!month) return; // Don't fetch if no month is selected
       try {
-        const response = await fetch(`http://localhost:5008/price-distribution?month=${month}`); // Pass month as query parameter
+        const response = await fetch(`https://transactionsystem-server.onrender.com/price-distribution?month=${month}`); // Pass month as query parameter
         const data = await response.json();
         console.log(data);
         const formattedData = Object.keys(data).map(range => ({
