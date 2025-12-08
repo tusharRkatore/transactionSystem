@@ -30,7 +30,7 @@ const CategoryDistributionChart = () => {
       if (!month) return; // Don't fetch if no month is selected
 
       try {
-        const response = await fetch(`http://localhost:5008/category-distribution?month=${month}`); // Pass month as query parameter
+        const response = await fetch(`https://transactionsystem-server.onrender.com/category-distribution?month=${month}`); // Pass month as query parameter
         const data = await response.json();
         console.log(data);
 
