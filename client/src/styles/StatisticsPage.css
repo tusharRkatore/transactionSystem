@@ -33,3 +33,206 @@
   margin: 10px 0;
   font-weight: bold;
 }
+/* ==========================================================
+   🌐 GLOBAL DASHBOARD LAYOUT (TransactionPage + Charts + Stats)
+========================================================== */
+
+/* Main dashboard container */
+.dashboard-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive grid for all components */
+.dashboard-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Ensure all child components fit well */
+.dashboard-grid > * {
+  width: 100%;
+  min-height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================
+   📊 CHART COMPONENTS (Price + Category)
+========================================================== */
+
+.chart-container {
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+}
+
+/* Make charts responsive */
+.chart-container canvas,
+.chart-container svg {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* ==========================================================
+   📄 TRANSACTION PAGE TABLE
+========================================================== */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px; /* forces horizontal scroll on mobile */
+}
+
+.table-container th,
+.table-container td {
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.table-container th {
+  background: #6e8efb;
+  color: white;
+}
+
+.table-container tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+/* ==========================================================
+   📈 STATISTICS PAGE STYLING
+========================================================== */
+
+.stats-box {
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stats-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stats-item {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+/* ==========================================================
+   📱 RESPONSIVE NAVBAR
+========================================================== */
+
+.navbar {
+  width: 100%;
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Individual nav buttons */
+.nav-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Logout button special style */
+.logout-btn {
+  background: rgba(255, 80, 80, 0.5);
+}
+
+.logout-btn:hover {
+  background: rgba(255, 80, 80, 0.7);
+}
+
+/* ==========================================================
+   📱 MOBILE NAVBAR
+========================================================== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================================
+   📱 MOBILE RESPONSIVE DASHBOARD COMPONENTS
+========================================================== */
+
+@media (max-width: 480px) {
+  .dashboard-grid > * {
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .stats-box {
+    padding: 15px;
+  }
+
+  .stats-title {
+    font-size: 18px;
+  }
+
+  .table-container th,
+  .table-container td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
